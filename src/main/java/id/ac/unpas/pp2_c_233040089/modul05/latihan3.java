@@ -14,7 +14,7 @@ import javax.swing.JButton; // Untuk bikin tombol [cite: 1183]
 
 /**
  *
- * @author Aurellia // (Author kamu)
+ * @author Aurellia
  */
 public class latihan3 { 
 
