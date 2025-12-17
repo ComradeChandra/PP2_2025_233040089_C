@@ -195,16 +195,16 @@ public class AplikasiFileIO extends JFrame {
 ==========PENJELASAN KODE==========
 Kode ini adalah gabungan dari Latihan 1 sampai 4 di Modul 9. Intinya tentang Input/Output (IO) File.
 
-1.  **Membaca/Menulis Teks (Latihan 1 & 4):**
+1.  Membaca/Menulis Teks (Latihan 1 & 4):
     Aku pake `BufferedReader` dan `BufferedWriter`. Kenapa ada 'Buffered'? Biar bacanya sekalian banyak (buffer), nggak satu-satu huruf, jadi lebih cepet.
     Untuk fitur Latihan 4 (Append), kuncinya ada di `new FileWriter(file, true)`. Parameter `true` itu ngasih tau Java: "Jangan hapus isi file lama, tapi tambahin aja tulisan baru di bawahnya".
 
-2.  **Auto-Load (Latihan 2):**
+2.  Auto-Load (Latihan 2):
     Di konstruktor (pas aplikasi baru nyala), aku panggil method `muatCatatanTerakhir()`. Dia nyari file "last_notes.txt". Kalo ada, langsung ditampilin di layar. Aku pake `try-catch` di situ, jadi kalo filenya nggak ada (misal pas pertama kali run), program nggak error/crash, cuma diem aja.
 
-3.  **Serialisasi Objek (Latihan 3):**
+3.  Serialisasi Objek (Latihan 3):
     Ini yang agak beda. Aku pake `ObjectOutputStream` buat nyimpen objek `UserConfig` (yang udah kubikin di file sebelah) ke file "config.obj". Ini bukan nyimpen tulisan biasa, tapi nyimpen struktur objek Java. Pas dibaca lagi pake `ObjectInputStream`, dia langsung jadi objek lagi, nggak perlu di-parsing manual.
 
-4.  **Exception Handling:**
+4.  Exception Handling:
     Hampir semua operasi file aku bungkus pake blok `try-catch`. Soalnya urusan file itu rawan error (file ilang, harddisk penuh, dll). Jadi kalo ada apa-apa, program nangkep errornya dan ngasih tau user lewat pesan dialog, nggak langsung force close.
 */
